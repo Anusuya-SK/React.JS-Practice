@@ -1,13 +1,13 @@
 {/* <div id="parent">
-    <div id="child1">
-        <h1>It's h1 tag</h1>
-        <h2>It's h2 tag</h2>
-    </div>
-    <div id="child2">
-        <h1>It's h1 tag</h1>
-        <h2>It's h2 tag</h2>
-    </div>
-</div> */}
+        <div id="child1">
+            <h1>It's h1 tag</h1>
+            <h2>It's h2 tag</h2>
+        </div>
+        <div id="child2">
+            <h1>It's h1 tag</h1>
+            <h2>It's h2 tag</h2>
+        </div>
+    </div> */}
 
 const parent = React.createElement(
     "div",

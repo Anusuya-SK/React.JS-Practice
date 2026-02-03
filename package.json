@@ -1,0 +1,23 @@
+{
+  "name": "react.js-practice",
+  "version": "1.0.0",
+  "description": "This is an React App by Anusuya",
+  "homepage": "https://github.com/Anusuya-SK/React.JS-Practice#readme",
+  "bugs": {
+    "url": "https://github.com/Anusuya-SK/React.JS-Practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anusuya-SK/React.JS-Practice.git"
+  },
+  "license": "ISC",
+  "author": "Anusuya",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
