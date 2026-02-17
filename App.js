@@ -1,29 +1,69 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React Element
-const title = (
-    <h2>
-        This is Title
-    </h2>
-);
+// Header
+//     - Logo
+//     - Nav Items
+// Body
+//     - Search
+//     - Restaurant Container
+//         - Restaurant Card
+//             - Dish Name
+//             - Image
+//             - Restaurant Name
+//             - Rating
+//             - Cuisines
+//             - Time to Deliver
 
+// Footer
+//     - Copyright
+//     - Links
+//     - Address
+//     - Contact
 
-// React Component
-const Parent = () => (
-    <h1 className="heading" tabIndex="1">
-        This is Parent heading
-    </h1>
-);
+const Header = () => {
+    return (
+        <div className="header">
+            <div className="logo-container">
+                <img className="logo" src="https://png.pngtree.com/png-vector/20240806/ourlarge/pngtree-free-food-delivery-logo-template-png-image_13394103.png" />
+            </div>
+            <div className="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
+    )
+}
 
-// Component Composition
-const Child = () => (
-    <div id="container">
-        {title}
-        <Parent />
-        <h1>This is Child Heading</h1>
-    </div>
-)
+const RestaurantCard = () => {
+    return (
+        <div>
+            <h2>Mehana Foods</h2>
+        </div>
+    )
+}
+
+const Body = () => {
+    return (
+        <div>
+            <h3>Search</h3>
+            <RestaurantCard />
+        </div>
+    )
+}
+
+const AppLayout = () => {
+    return (
+        <div className="app">
+            <Header />
+            <Body />
+        </div>
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Child />);
+root.render(<AppLayout />);
