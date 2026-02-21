@@ -13,7 +13,7 @@ const resList = [
     {
         id: 2,
         resName: "KFC",
-        rating: 4.1,
+        rating: 3.2,
         address: "Koramangala, Bangalore",
         cuisines: ["Fried Chicken", "Fast Food", "Burgers"],
         priceForTwo: "₹500 for two",
@@ -22,7 +22,7 @@ const resList = [
     {
         id: 3,
         resName: "McDonald's",
-        rating: 4.2,
+        rating: 4.1,
         address: "MG Road, Bangalore",
         cuisines: ["Burgers", "Fast Food", "Beverages"],
         priceForTwo: "₹400 for two",
@@ -31,7 +31,7 @@ const resList = [
     {
         id: 4,
         resName: "Dominos",
-        rating: 4.0,
+        rating: 3.9,
         address: "HSR Layout, Bangalore",
         cuisines: ["Pizza", "Italian", "Fast Food"],
         priceForTwo: "₹700 for two",
