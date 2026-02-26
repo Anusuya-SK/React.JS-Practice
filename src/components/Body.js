@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
 
@@ -16,6 +17,10 @@ const Body = () => {
         console.log(json);
         // Optional Chaining
         setListOfRestaurant(json?.recipes);
+    }
+
+    if (listOfRestaurant == 0) {
+        return <Shimmer />
     }
 
     return (
