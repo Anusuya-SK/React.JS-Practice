@@ -18,11 +18,13 @@
   width: 100px;
 }
 .res-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+  gap: 20px; /* spacing between cards */
 }
 .res-card {
   background-color: #f0f0f0;
-  width: 200px;
+  width: 240px;
   padding: 5px;
   margin: 10px;
 }
@@ -35,4 +37,5 @@
 .res-card > img {
   height: 150px;
   width: 100%;
+  object-fit: cover;
 }

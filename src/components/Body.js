@@ -1,10 +1,22 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
 
-    const [listOfRestaurant, setListOfRestaurant] = useState(resList);
+    const [listOfRestaurant, setListOfRestaurant] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const data = await fetch("https://dummyjson.com/recipes");
+        const json = await data.json();
+        console.log(json);
+        // Optional Chaining
+        setListOfRestaurant(json?.recipes);
+    }
 
     return (
         <div className="main">
