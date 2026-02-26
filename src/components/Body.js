@@ -19,11 +19,12 @@ const Body = () => {
         setListOfRestaurant(json?.recipes);
     }
 
-    if (listOfRestaurant == 0) {
-        return <Shimmer />
-    }
+    // Conditional Rendering
+    // if (listOfRestaurant == 0) {
+    //     return <Shimmer />;
+    // }
 
-    return (
+    return listOfRestaurant == 0 ? <Shimmer /> : (
         <div className="main">
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
