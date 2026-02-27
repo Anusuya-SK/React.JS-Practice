@@ -28,7 +28,7 @@ const Body = () => {
         <div className="main">
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
-                    const filteredList = listOfRestaurant.filter((res) => res.rating > 4);
+                    const filteredList = listOfRestaurant.filter((res) => res.rating == 5);
                     setListOfRestaurant(filteredList);
                 }}>Top Rated Restaurants</button>
             </div>
