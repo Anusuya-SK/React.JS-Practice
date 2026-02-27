@@ -59,3 +59,11 @@
   cursor: pointer;
   width: 80px;
 }
+
+.filter {
+  display: flex;
+}
+
+.filter-btn {
+  margin-left: 20px;
+}
