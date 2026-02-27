@@ -8,6 +8,7 @@ const Body = () => {
     // Local State Variable
     // Whenever state variable updates, react triggers a reconciliation cycle(re-renders the componenet)
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
+    const [filteredRestaurant, setfilteredRestaurant] = useState([]);
 
     const [searchText, setSearchText] = useState("");
 
@@ -21,6 +22,7 @@ const Body = () => {
         console.log(json);
         // Optional Chaining
         setListOfRestaurant(json?.recipes);
+        setfilteredRestaurant(json?.recipes)
     }
 
     // Conditional Rendering
@@ -41,16 +43,16 @@ const Body = () => {
                         const filteredRes = listOfRestaurant.filter((res) => (
                             res.name.toLowerCase().includes(searchText.toLowerCase())
                         ));
-                        setListOfRestaurant(filteredRes);
+                        setfilteredRestaurant(filteredRes);
                     }}>Search</button>
                 </div>
                 <button className="filter-btn" onClick={() => {
                     const filteredList = listOfRestaurant.filter((res) => res.rating == 5);
-                    setListOfRestaurant(filteredList);
+                    setfilteredRestaurant(filteredList);
                 }}>Top Rated Restaurants</button>
             </div>
             <div className="res-container">
-                {listOfRestaurant.map((restaurant) => (
+                {filteredRestaurant.map((restaurant) => (
                     <RestaurantCard key={restaurant.id} resData={restaurant} />
                 ))}
             </div>
